@@ -423,6 +423,7 @@ export default function BlogEditController(
             .then((post) => {
                 notify.stopSaving();
                 notify.info(gettext('Post saved'));
+                cleanUpFlag();
                 cleanEditor();
 
                 $scope.selectedPostType = 'Default';
